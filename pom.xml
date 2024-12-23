@@ -17,15 +17,21 @@
 		<maven.compiler.release>17</maven.compiler.release>
 	</properties>
 
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.2.1</version>
+	</parent>
+
 	<dependencyManagement>
 		<dependencies>
-			<dependency>
+			<!-- <dependency>
 				<groupId>org.junit</groupId>
 				<artifactId>junit-bom</artifactId>
 				<version>5.11.0</version>
 				<type>pom</type>
 				<scope>import</scope>
-			</dependency>
+			</dependency>-->
 		</dependencies>
 	</dependencyManagement>
 
@@ -102,6 +108,13 @@
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
+			<version>6.0.0</version> <!-- Use the correct version for your Spring
+			Boot version -->
+			<scope>provided</scope>
 		</dependency>
 		<!-- Optionally: parameterized tests support -->
 		<dependency>

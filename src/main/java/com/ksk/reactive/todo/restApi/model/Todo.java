@@ -16,7 +16,7 @@ public class Todo {
 	 * provide a manual way to generate id as @GeneratedValue doesn't work in case of reactive
 	 */
 	@Id
-	private UUID id;
+	private long id;
 	
 	private String task;
 	
@@ -25,13 +25,11 @@ public class Todo {
 	private LocalDate dateCreated;
 	
 	public Todo() {
-		this.id = UUID.randomUUID();
 	}
 	
 	public Todo(String task, boolean isCompleted, LocalDate createdDate) {
 		this.task = task;
 		this.completed = isCompleted;
 		this.dateCreated = createdDate;
-		this.id = UUID.randomUUID();
 	}
 }
